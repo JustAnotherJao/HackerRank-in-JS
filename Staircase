@@ -1,0 +1,12 @@
+function staircase(n) {
+    var size = n;
+    var aux = size;
+    var aux2 = 1;
+    var str = '#';
+    var empty = ' ';
+    for(let i = 0; i < size; i++){
+        console.log(empty.repeat(aux-1)+str.repeat(aux2));
+        aux--;
+        aux2++;
+    }
+}
