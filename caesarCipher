@@ -1,0 +1,26 @@
+function caesarCipher(s, k) {
+    var alpha = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+    var newMessage = '';
+    for(let i=0; i < s.length; i++){
+        let char = s[i];
+        if(char.match(/[a-z]/i)){
+            let indexChar = alpha.indexOf(char);
+            if(indexChar == -1){
+                let piquininin = char.toLowerCase();
+                indexChar = alpha.indexOf(piquininin);
+
+                let newAlpha = ((indexChar+k)%26);
+
+                let grandinho = alpha[newAlpha].toUpperCase();
+                newMessage+=grandinho;
+            }else{
+               let newAlpha = ((indexChar+k)%26);
+                newMessage+=alpha[newAlpha]; 
+            }
+            
+        }else{
+            newMessage+=char; 
+        }
+    }
+    return newMessage;
+}
