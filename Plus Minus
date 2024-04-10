@@ -3,12 +3,12 @@ function plusMinus(arr) {
     const n = arr.length;
 
     for(let i=0; i < n; i++){
-        let bct = arr[i];
-        if (bct > 0){
+        let atual = arr[i];
+        if (atual > 0){
             pos++;
-        }else if(bct === 0){
+        }else if(atual === 0){
             zer++;
-        }else if(bct < 0){
+        }else if(atual < 0){
             neg++;
         }
     }
